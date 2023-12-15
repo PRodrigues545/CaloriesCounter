@@ -1,6 +1,6 @@
 package ipca.projeto.caloriescounter.ui.home
 
-import android.view.View
+/*import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.ImageView
@@ -66,4 +66,4 @@ class AlimentoFragment : Fragment() {
         }
 
     }
-}
+}*/
