@@ -1,6 +1,7 @@
 package ipca.projeto.caloriescounter
 
 import android.os.Bundle
+import android.util.Log
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
@@ -40,24 +41,19 @@ class  MainActivity : AppCompatActivity() {
             when (menuItem.itemId) {
                 R.id.navigation_home -> {
                     // Replace the current fragment with HomeFragment
-                    replaceFragment(HomeFragment())
+                    Log.d("Navigation", "Home selected")
+                    navController.navigate(R.id.navigation_home)
                     return@setOnNavigationItemSelectedListener true
                 }
                 R.id.navigation_counter -> {
                     // Replace the current fragment with CounterFragment
-                    replaceFragment(CounterFragment())
+                    Log.d("Navigation", "Counter selected")
+                    navController.navigate(R.id.action_navigation_home_to_counterFragment)
                     return@setOnNavigationItemSelectedListener true
                 }
                 // Handle other menu items here if needed
                 else -> false
             }
         }
-    }
-
-    // Function to replace fragments
-    private fun replaceFragment(fragment: Fragment) {
-        supportFragmentManager.beginTransaction()
-            .replace(R.id.fragment_container, fragment)
-            .commit()
     }
 }

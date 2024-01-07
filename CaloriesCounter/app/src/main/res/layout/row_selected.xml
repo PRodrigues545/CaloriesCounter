@@ -45,19 +45,6 @@
         app:layout_constraintStart_toEndOf="@+id/ImageViewS"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/textViewNutritionS"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textViewCalsS"
-        android:layout_marginStart="16dp"
-        android:layout_toEndOf="@+id/ImageViewS"
-        android:alpha="200"
-        android:clickable="true"
-        android:text="Nutritional Values"
-        app:layout_constraintBottom_toBottomOf="@+id/ImageViewS"
-        app:layout_constraintStart_toEndOf="@+id/ImageViewS" />
-
     <Button
         android:id="@+id/buttonRemove"
         android:layout_width="wrap_content"
@@ -70,82 +57,5 @@
         app:layout_constraintBottom_toBottomOf="@+id/ImageViewS"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/ImageViewS" />
-
-    <TextView
-        android:id="@+id/fatTextS"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/ImageViewS"
-        android:layout_marginStart="64dp"
-        android:layout_marginTop="8dp"
-        android:text="Fat Text"
-        android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ImageViewS"
-        android:visibility="gone"/>
-
-    <TextView
-        android:id="@+id/carbsTextS"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/fatTextS"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="4dp"
-        android:text="Carbs Text"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/fiberTextS"
-        app:layout_constraintTop_toBottomOf="@+id/fiberTextS"
-        android:visibility="gone"/>
-
-    <TextView
-        android:id="@+id/sugarTextS"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/carbsTextS"
-        android:layout_marginStart="128dp"
-        android:text="Sugar Text"
-        android:textSize="14sp"
-        app:layout_constraintStart_toEndOf="@+id/fatTextS"
-        app:layout_constraintTop_toTopOf="@+id/fatTextS"
-        android:visibility="gone"/>
-
-    <TextView
-        android:id="@+id/proteinTextS"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/ImageViewS"
-        android:layout_marginTop="8dp"
-        android:text="Protein Text"
-        android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="@+id/sugarTextS"
-        app:layout_constraintTop_toBottomOf="@+id/sugarTextS"
-        android:visibility="gone"/>
-
-    <TextView
-        android:id="@+id/sodiumTextS"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/proteinTextS"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="4dp"
-        android:text="Sodium Text"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/proteinTextS"
-        app:layout_constraintTop_toBottomOf="@+id/proteinTextS"
-        android:visibility="gone"/>
-
-    <TextView
-        android:id="@+id/fiberTextS"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/sodiumTextS"
-        android:layout_marginTop="8dp"
-        android:text="Fiber Text"
-        android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="@+id/fatTextS"
-        app:layout_constraintTop_toBottomOf="@+id/fatTextS"
-        android:visibility="gone"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

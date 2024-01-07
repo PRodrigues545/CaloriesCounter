@@ -73,32 +73,11 @@ class CounterFragment : Fragment(){
             val imageViewS = rootView.findViewById<ImageView>(R.id.ImageViewS)
             val textViewAlimentoS = rootView.findViewById<TextView>(R.id.textViewAlimentoS)
             val textViewCalsS = rootView.findViewById<TextView>(R.id.textViewCalsS)
-            val textViewNutritionS = rootView.findViewById<TextView>(R.id.textViewNutritionS)
             val buttonRemove = rootView.findViewById<Button>(R.id.buttonRemove)
-            val fatTextS = rootView.findViewById<TextView>(R.id.fatTextS)
-            val carbsTextS = rootView.findViewById<TextView>(R.id.carbsTextS)
-            val sugarTextS = rootView.findViewById<TextView>(R.id.sugarTextS)
-            val proteinTextS = rootView.findViewById<TextView>(R.id.proteinTextS)
-            val sodiumTextS = rootView.findViewById<TextView>(R.id.sodiumTextS)
-            val fiberTextS = rootView.findViewById<TextView>(R.id.fiberTextS)
-
-            val fat = currentAlimento.fat.toString()
-            val carb = currentAlimento.carb.toString()
-            val sugar = currentAlimento.sugar.toString()
-            val protein = currentAlimento.protein.toString()
-            val sodium = currentAlimento.sodium.toString()
-            val fiber = currentAlimento.fiber.toString()
-            fatTextS.text = "Fat: $fat"
-            carbsTextS.text = "Carbs: $carb"
-            sugarTextS.text = "Sugars: $sugar"
-            proteinTextS.text = "Protein: $protein"
-            sodiumTextS.text = "Sodium: $sodium"
-            fiberTextS.text = "Fiber: $fiber"
 
             textViewAlimentoS.text = currentAlimento.nome
             var cal = currentAlimento.cal.toString()
             textViewCalsS.text = "Calorias: ${cal} / 100g"
-            textViewNutritionS.text = "Valores nutricionais / 100g"
 
             buttonRemove.setOnClickListener {
                 // Here, you can remove the first Alimento from the list for demonstration purposes
@@ -108,18 +87,6 @@ class CounterFragment : Fragment(){
                     }
                 }
             }
-
-            val nutrition = arrayListOf<TextView>(
-                fatTextS,carbsTextS,sugarTextS,proteinTextS,sodiumTextS,fiberTextS
-            )
-
-            textViewNutritionS.setOnClickListener {
-                val visibility = if (fatTextS.visibility == View.VISIBLE) View.GONE else View.VISIBLE
-                nutrition.forEach { textView ->
-                    textView.visibility = visibility
-                }
-            }
-
             return rootView
         }
 
