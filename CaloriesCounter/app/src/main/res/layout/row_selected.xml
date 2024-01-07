@@ -6,7 +6,7 @@
     android:layout_height="wrap_content">
 
     <ImageView
-        android:id="@+id/ImageView"
+        android:id="@+id/ImageViewS"
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:layout_alignParentStart="true"
@@ -14,138 +14,138 @@
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
         android:padding="16dp"
-        app:layout_constraintBottom_toTopOf="@+id/fatText"
+        app:layout_constraintBottom_toTopOf="@+id/fatTextS"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_launcher_foreground" />
 
     <TextView
-        android:id="@+id/textViewAlimento"
+        android:id="@+id/textViewAlimentoS"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
-        android:layout_toEndOf="@id/ImageView"
+        android:layout_toEndOf="@id/ImageViewS"
         android:text="Main Text"
         android:textSize="18sp"
-        app:layout_constraintStart_toEndOf="@+id/ImageView"
+        app:layout_constraintStart_toEndOf="@+id/ImageViewS"
         app:layout_constraintTop_toTopOf="parent" />
 
 
     <TextView
-        android:id="@+id/textViewCals"
+        android:id="@+id/textViewCalsS"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textViewAlimento"
+        android:layout_below="@+id/textViewAlimentoS"
         android:layout_marginStart="16dp"
-        android:layout_toEndOf="@id/ImageView"
+        android:layout_toEndOf="@id/ImageViewS"
         android:text="Cals Text"
         android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="@+id/ImageView"
-        app:layout_constraintStart_toEndOf="@+id/ImageView"
+        app:layout_constraintBottom_toBottomOf="@+id/ImageViewS"
+        app:layout_constraintStart_toEndOf="@+id/ImageViewS"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textViewNutrition"
+        android:id="@+id/textViewNutritionS"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textViewCals"
+        android:layout_below="@+id/textViewCalsS"
         android:layout_marginStart="16dp"
-        android:layout_toEndOf="@+id/ImageView"
+        android:layout_toEndOf="@+id/ImageViewS"
         android:alpha="200"
         android:clickable="true"
         android:text="Nutritional Values"
-        app:layout_constraintBottom_toBottomOf="@+id/ImageView"
-        app:layout_constraintStart_toEndOf="@+id/ImageView" />
+        app:layout_constraintBottom_toBottomOf="@+id/ImageViewS"
+        app:layout_constraintStart_toEndOf="@+id/ImageViewS" />
 
     <Button
-        android:id="@+id/button"
-        android:layout_width="60dp"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/textViewCals"
-        android:layout_alignBottom="@+id/ImageView"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="16dp"
-        android:text="+"
-        app:layout_constraintBottom_toBottomOf="@+id/ImageView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/ImageView" />
-
-    <TextView
-        android:id="@+id/fatText"
+        android:id="@+id/buttonRemove"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/ImageView"
+        android:layout_alignTop="@+id/textViewCalsS"
+        android:layout_alignBottom="@+id/ImageViewS"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="8dp"
+        android:text="Remove"
+        app:layout_constraintBottom_toBottomOf="@+id/ImageViewS"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ImageViewS" />
+
+    <TextView
+        android:id="@+id/fatTextS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ImageViewS"
         android:layout_marginStart="64dp"
         android:layout_marginTop="8dp"
         android:text="Fat Text"
         android:textSize="14sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ImageView"
+        app:layout_constraintTop_toBottomOf="@+id/ImageViewS"
         android:visibility="gone"/>
 
     <TextView
-        android:id="@+id/carbsText"
+        android:id="@+id/carbsTextS"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/fatText"
+        android:layout_below="@id/fatTextS"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="4dp"
         android:text="Carbs Text"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/fiberText"
-        app:layout_constraintTop_toBottomOf="@+id/fiberText"
+        app:layout_constraintStart_toStartOf="@+id/fiberTextS"
+        app:layout_constraintTop_toBottomOf="@+id/fiberTextS"
         android:visibility="gone"/>
 
     <TextView
-        android:id="@+id/sugarText"
+        android:id="@+id/sugarTextS"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/carbsText"
+        android:layout_below="@id/carbsTextS"
         android:layout_marginStart="128dp"
         android:text="Sugar Text"
         android:textSize="14sp"
-        app:layout_constraintStart_toEndOf="@+id/fatText"
-        app:layout_constraintTop_toTopOf="@+id/fatText"
+        app:layout_constraintStart_toEndOf="@+id/fatTextS"
+        app:layout_constraintTop_toTopOf="@+id/fatTextS"
         android:visibility="gone"/>
 
     <TextView
-        android:id="@+id/proteinText"
+        android:id="@+id/proteinTextS"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/ImageView"
+        android:layout_below="@+id/ImageViewS"
         android:layout_marginTop="8dp"
         android:text="Protein Text"
         android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="@+id/sugarText"
-        app:layout_constraintTop_toBottomOf="@+id/sugarText"
+        app:layout_constraintStart_toStartOf="@+id/sugarTextS"
+        app:layout_constraintTop_toBottomOf="@+id/sugarTextS"
         android:visibility="gone"/>
 
     <TextView
-        android:id="@+id/sodiumText"
+        android:id="@+id/sodiumTextS"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/proteinText"
+        android:layout_below="@id/proteinTextS"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="4dp"
         android:text="Sodium Text"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/proteinText"
-        app:layout_constraintTop_toBottomOf="@+id/proteinText"
+        app:layout_constraintStart_toStartOf="@+id/proteinTextS"
+        app:layout_constraintTop_toBottomOf="@+id/proteinTextS"
         android:visibility="gone"/>
 
     <TextView
-        android:id="@+id/fiberText"
+        android:id="@+id/fiberTextS"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/sodiumText"
+        android:layout_below="@id/sodiumTextS"
         android:layout_marginTop="8dp"
         android:text="Fiber Text"
         android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="@+id/fatText"
-        app:layout_constraintTop_toBottomOf="@+id/fatText"
+        app:layout_constraintStart_toStartOf="@+id/fatTextS"
+        app:layout_constraintTop_toBottomOf="@+id/fatTextS"
         android:visibility="gone"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

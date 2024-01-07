@@ -4,64 +4,135 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.BaseAdapter
+import android.widget.Button
+import android.widget.ImageView
+import android.widget.SearchView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
+import androidx.fragment.app.activityViewModels
 import ipca.projeto.caloriescounter.Alimento
-import ipca.projeto.caloriescounter.CustomAdapter
 import ipca.projeto.caloriescounter.R
 import ipca.projeto.caloriescounter.databinding.FragmentHomeBinding
 
-class HomeFragment : Fragment() {
+class HomeFragment : Fragment(){
+    private val sharedAlimentoViewModel: SharedAlimentoViewModel by activityViewModels()
+    var alimentos : List<Alimento> = arrayListOf(
+        Alimento("Banana", 9.8, 13.2, 25.5, 19.1, 77.6, 90.1, 4.8, ""),
+        Alimento("Batata", 11.3, 10.5, 28.7, 14.8, 90.2, 85.6, 6.3, ""),
+        Alimento("Queijo", 14.5, 11.9, 30.3, 17.2, 85.7, 89.8, 5.9, ""),
+        Alimento("Frango", 16.1, 12.8, 33.6, 15.9, 81.3, 88.7, 4.2, ""),
+        Alimento("Salmão", 12.7, 11.1, 29.8, 16.7, 88.4, 86.9, 5.5, "")
+    )
+    val alimentosAdapter = AlimentosAdapter()
 
-    private lateinit var recyclerView: RecyclerView
-    private lateinit var customAdapter: CustomAdapter
-    private lateinit var alimentoList: List<Alimento> // Replace Alimento with your actual data type
-<<<<<<< HEAD
+    var selectedAlimentos : List<Alimento> = arrayListOf()
 
-=======
->>>>>>> 2c1e3441fc6d7088afd2df1e1e3c1a2f4294853c
+    private var _binding: FragmentHomeBinding? = null
+    private val binding get() = _binding!!
+    private lateinit var searchView : SearchView
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.fragment_home, container, false)
-
-        return view
+        _binding = FragmentHomeBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // Initialize RecyclerView
-        recyclerView = view.findViewById(R.id.recyclerView)
+        binding.listViewAlimento.adapter = alimentosAdapter
 
-        // Set Layout Manager (Optional)
-        recyclerView.layoutManager = LinearLayoutManager(requireContext())
-
-        // Initialize your data list (alimentoList)
-        var alimentoList = arrayListOf<Alimento>(
-            Alimento("Banana", 12.0, 12.0, 32.0, 16.5, 86.4, 87.23, 5.21, ""),
-<<<<<<< HEAD
-            Alimento("Batata", 10.0, 12.0, 32.0, 16.5, 86.4, 87.23, 5.21, ""),
-            Alimento("Queijo", 13.0, 12.0, 32.0, 16.5, 86.4, 87.23, 5.21, ""),
-            Alimento("Frango", 17.0, 12.0, 32.0, 16.5, 86.4, 87.23, 5.21, "")
-=======
-            Alimento("Batata", 12.0, 12.0, 32.0, 16.5, 86.4, 87.23, 5.21, "")
->>>>>>> 2c1e3441fc6d7088afd2df1e1e3c1a2f4294853c
-        )
-
-        // Initialize and set the adapter
-        customAdapter = CustomAdapter(alimentoList)
-        recyclerView.adapter = customAdapter
     }
-<<<<<<< HEAD
 
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
 
-=======
->>>>>>> 2c1e3441fc6d7088afd2df1e1e3c1a2f4294853c
+    inner class AlimentosAdapter : BaseAdapter() {
+        var filteredAlimentos: List<Alimento> = listOf()
+
+        fun updateAlimentos(alimentos: List<Alimento>) {
+            filteredAlimentos = alimentos
+            notifyDataSetChanged()
+        }
+
+        override fun getCount(): Int {
+            return alimentos.size
+        }
+
+        override fun getItem(position: Int): Any {
+            return alimentos[position]
+        }
+
+        override fun getItemId(position: Int): Long {
+            return 0
+        }
+
+        override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
+            val rootView = layoutInflater.inflate(R.layout.row_alimento, parent, false)
+
+            val imageView = rootView.findViewById<ImageView>(R.id.ImageView)
+            val textViewAlimento = rootView.findViewById<TextView>(R.id.textViewAlimento)
+            val textViewCals = rootView.findViewById<TextView>(R.id.textViewCals)
+            val textViewNutrition = rootView.findViewById<TextView>(R.id.textViewNutrition)
+            val button = rootView.findViewById<Button>(R.id.button)
+            val fatText = rootView.findViewById<TextView>(R.id.fatText)
+            val carbsText = rootView.findViewById<TextView>(R.id.carbsText)
+            val sugarText = rootView.findViewById<TextView>(R.id.sugarText)
+            val proteinText = rootView.findViewById<TextView>(R.id.proteinText)
+            val sodiumText = rootView.findViewById<TextView>(R.id.sodiumText)
+            val fiberText = rootView.findViewById<TextView>(R.id.fiberText)
+
+            val currentAlimento = alimentos[position]
+
+            val fat = currentAlimento.fat.toString()
+            val carb = currentAlimento.carb.toString()
+            val sugar = currentAlimento.sugar.toString()
+            val protein = currentAlimento.protein.toString()
+            val sodium = currentAlimento.sodium.toString()
+            val fiber = currentAlimento.fiber.toString()
+            fatText.text = "Fat: $fat"
+            carbsText.text = "Carbs: $carb"
+            sugarText.text = "Sugars: $sugar"
+            proteinText.text = "Protein: $protein"
+            sodiumText.text = "Sodium: $sodium"
+            fiberText.text = "Fiber: $fiber"
+
+            textViewAlimento.text = currentAlimento.nome
+            var cal = currentAlimento.cal.toString()
+            textViewCals.text = "Calorias: ${cal} / 100g"
+            textViewNutrition.text = "Valores nutricionais / 100g"
+
+            button.setOnClickListener {
+                val alimentoExists = sharedAlimentoViewModel.selectedAlimentos.value?.any { it.nome == currentAlimento.nome }
+
+                if (alimentoExists == false) {
+                    sharedAlimentoViewModel.addSelectedAlimento(currentAlimento)
+                    // Inform the ViewModel about the updated list
+                    Toast.makeText(context, "${currentAlimento.nome} adicionado aos selecionados", Toast.LENGTH_SHORT).show()
+                } else {
+                    Toast.makeText(context, "${currentAlimento.nome} já foi adicionado", Toast.LENGTH_SHORT).show()
+                }
+            }
+
+            val nutrition = arrayListOf<TextView>(
+                fatText,carbsText,sugarText,proteinText,sodiumText,fiberText
+            )
+
+            textViewNutrition.setOnClickListener {
+                val visibility = if (fatText.visibility == View.VISIBLE) View.GONE else View.VISIBLE
+                nutrition.forEach { textView ->
+                    textView.visibility = visibility
+                }
+            }
+
+            return rootView
+        }
+    }
 }
