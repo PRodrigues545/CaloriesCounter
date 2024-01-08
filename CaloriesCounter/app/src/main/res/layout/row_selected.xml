@@ -65,9 +65,11 @@
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="8dp"
         android:text="Remove"
+        android:textSize="10sp"
+        app:iconPadding="0dp"
         app:layout_constraintBottom_toBottomOf="@+id/ImageViewS"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/ImageViewS" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextGrams" />
 
     <TextView
         android:id="@+id/fatTextS"
@@ -145,5 +147,17 @@
         app:layout_constraintStart_toStartOf="@+id/fatTextS"
         app:layout_constraintTop_toBottomOf="@+id/fatTextS"
         android:visibility="gone"/>
+
+    <EditText
+        android:id="@+id/editTextGrams"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:ems="5"
+        android:hint="100g"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

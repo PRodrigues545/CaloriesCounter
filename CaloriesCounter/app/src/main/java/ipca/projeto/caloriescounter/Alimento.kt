@@ -10,4 +10,5 @@ data class Alimento (
     var sodium : Double,
     var fiber : Double,
     var imageUrl : String?,
+    var quantity: Int = 0 // Default quantity is 0 grams
 )
