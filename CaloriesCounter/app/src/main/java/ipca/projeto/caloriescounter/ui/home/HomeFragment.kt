@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.Button
+import android.widget.Filter
 import android.widget.ImageView
 import android.widget.SearchView
 import android.widget.TextView
@@ -47,6 +48,22 @@ class HomeFragment : Fragment(){
 
         binding.listViewAlimento.adapter = alimentosAdapter
 
+        // Get reference to the SearchView
+        searchView = binding.searchView
+
+        // Set query text listener for the SearchView
+        searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+            override fun onQueryTextSubmit(query: String?): Boolean {
+                return false
+            }
+
+            override fun onQueryTextChange(newText: String?): Boolean {
+                // Filter the list when text changes
+                alimentosAdapter.getFilter().filter(newText)
+                return true
+            }
+        })
+
     }
 
     override fun onDestroyView() {
@@ -56,18 +73,46 @@ class HomeFragment : Fragment(){
 
     inner class AlimentosAdapter : BaseAdapter() {
         var filteredAlimentos: List<Alimento> = listOf()
-
-        fun updateAlimentos(alimentos: List<Alimento>) {
+        init {
+            // Initialize filteredAlimentos with the entire list initially
             filteredAlimentos = alimentos
-            notifyDataSetChanged()
+        }
+
+        // Implement the getFilter method from Filterable interface
+        fun getFilter(): Filter {
+            return object : Filter() {
+                override fun performFiltering(constraint: CharSequence?): FilterResults {
+                    val queryString = constraint.toString().toLowerCase()
+
+                    val filteredList = if (queryString.isEmpty()) {
+                        // If the query is empty, return the entire list
+                        alimentos
+                    } else {
+                        // Filter the list based on the query
+                        alimentos.filter { alimento ->
+                            alimento.nome!!.toLowerCase().contains(queryString)
+                        }
+                    }
+
+                    val filterResults = FilterResults()
+                    filterResults.values = filteredList
+                    return filterResults
+                }
+
+                override fun publishResults(constraint: CharSequence?, results: FilterResults?) {
+                    // Update the filtered list and notify adapter about the changes
+                    filteredAlimentos = results?.values as List<Alimento>
+                    notifyDataSetChanged()
+                }
+            }
         }
 
         override fun getCount(): Int {
-            return alimentos.size
+            return filteredAlimentos.size
         }
 
         override fun getItem(position: Int): Any {
-            return alimentos[position]
+            return filteredAlimentos[position]
         }
 
         override fun getItemId(position: Int): Long {
@@ -89,7 +134,7 @@ class HomeFragment : Fragment(){
             val sodiumText = rootView.findViewById<TextView>(R.id.sodiumText)
             val fiberText = rootView.findViewById<TextView>(R.id.fiberText)
 
-            val currentAlimento = alimentos[position]
+            val currentAlimento = filteredAlimentos[position]
 
             val fat = currentAlimento.fat.toString()
             val carb = currentAlimento.carb.toString()
