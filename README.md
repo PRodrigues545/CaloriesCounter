@@ -5,6 +5,9 @@
 CaloriesCounter é um aplicativo desenvolvido como parte do projeto para a disciplina de Desenvolvimento de Jogos para Dispositivos Móveis (DJPM) do curso de Engenharia de Desenvolvimento de Jogos Digitais (EDJD). Este aplicativo visa auxiliar os usuários a terem uma compreensão mais precisa das informações calóricas associadas a diversos alimentos.
 
 ## Tabela de Conteúdos ##
+* [Descrição]
+* [Features]
+* [Funcionamento]
 
 ### Descrição ###
 Bem-vindo ao CaloriesCounter, sua ferramenta abrangente para o gerenciamento de hábitos alimentares e contagem de calorias. Esta aplicação oferece uma abordagem integrada para apoiar seus objetivos de saúde. Desde a autenticação segura até a navegação intuitiva e o gerenciamento detalhado de informações alimentares, o CaloriesCounter é projetado para simplificar sua jornada de bem-estar.
