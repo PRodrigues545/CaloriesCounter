@@ -11,6 +11,11 @@ CaloriesCounter é um aplicativo desenvolvido como parte do projeto para a disci
 
 ### Descrição ###
 Bem-vindo ao CaloriesCounter, sua ferramenta abrangente para o gerenciamento de hábitos alimentares e contagem de calorias. Esta aplicação oferece uma abordagem integrada para apoiar seus objetivos de saúde. Desde a autenticação segura até a navegação intuitiva e o gerenciamento detalhado de informações alimentares, o CaloriesCounter é projetado para simplificar sua jornada de bem-estar.
+![Login](https://github.com/PRodrigues545/CaloriesCounter/assets/120456989/94668d31-3648-4f90-ba62-7b9a9288c1b2) 
+![Register](https://github.com/PRodrigues545/CaloriesCounter/assets/120456989/b7aa805f-26d0-4f8d-aa72-5b0199dd9cff)
+![Main_List](https://github.com/PRodrigues545/CaloriesCounter/assets/120456989/4e7dbb24-c3c8-4a65-9b75-c9ab408e62f7)
+![Counter2](https://github.com/PRodrigues545/CaloriesCounter/assets/120456989/583096c7-d4fc-4f96-b1f9-88d507b19b59)
+
 
 ### Features ###
 * **Precisão e detalhes**: Permite aos usuários monitorar com precisão a ingestão calórica, fornecendo uma representação detalhada dos alimentos consumidos
@@ -21,7 +26,7 @@ A pessoa escolhe os alimentos de interesse e estes serão adicionados numa lista
 
 ## Code 
 
-![Login](https://github.com/PRodrigues545/CaloriesCounter/assets/120456989/94668d31-3648-4f90-ba62-7b9a9288c1b2) ![Register](https://github.com/PRodrigues545/CaloriesCounter/assets/120456989/b7aa805f-26d0-4f8d-aa72-5b0199dd9cff)
+
 
 
 
