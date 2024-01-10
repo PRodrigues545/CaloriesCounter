@@ -8,6 +8,7 @@ CaloriesCounter é um aplicativo desenvolvido como parte do projeto para a disci
 * [Descrição](#Descrição "Goto Descrição")
 * [Features](#Features "Goto Features")
 * [Funcionamento](#Funcionamento "Goto Funcionamento")
+* [Conclusão](#Conclusão "Goto Conclusão")
 
 ### Descrição ###
 Bem-vindo ao CaloriesCounter, sua ferramenta abrangente para o gerenciamento de hábitos alimentares e contagem de calorias. Esta aplicação oferece uma abordagem integrada para apoiar seus objetivos de saúde. Desde a autenticação segura até a navegação intuitiva e o gerenciamento detalhado de informações alimentares, o CaloriesCounter é projetado para simplificar sua jornada de bem-estar.
@@ -25,6 +26,12 @@ Bem-vindo ao CaloriesCounter, sua ferramenta abrangente para o gerenciamento de 
 ### Funcionamento 
 A pessoa escolhe os alimentos de interesse e estes serão adicionados numa lista onde depois poderá definir as devidas quantidades e assim obter os valores nutricionais.
 
+### Conclusão
+A aplicação não está como foi inicialmente planeada, faltando o perfil e a opção de adicionar alimentos, mas, mesmo assim, consegue cumprir com o objetivo principal, contar calorias. Neste momento, os cálculos não estão precisos, uma vez que foi preferível focar no funcionamento dos calculos do que se o resultado é correto ou não.
+
+Eduardo Costa 25969
+Filipe Araújo 25981
+Pedro Rodrigues 25982
 
 
 
