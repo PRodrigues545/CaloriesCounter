@@ -25,7 +25,6 @@ Bem-vindo ao CaloriesCounter, sua ferramenta abrangente para o gerenciamento de 
 ### Funcionamento 
 A pessoa escolhe os alimentos de interesse e estes serão adicionados numa lista onde depois poderá definir as devidas quantidades e assim obter os valores nutricionais.
 
-## Code 
 
 
 
