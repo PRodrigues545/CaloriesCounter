@@ -27,7 +27,7 @@ Bem-vindo ao CaloriesCounter, sua ferramenta abrangente para o gerenciamento de 
 A pessoa escolhe os alimentos de interesse e estes serão adicionados numa lista onde depois poderá definir as devidas quantidades e assim obter os valores nutricionais.
 
 ### Conclusão
-A aplicação não está como foi inicialmente planeada, faltando o perfil e a opção de adicionar alimentos, mas, mesmo assim, consegue cumprir com o objetivo principal, contar calorias. Neste momento, os cálculos não estão precisos, uma vez que foi preferível focar no funcionamento dos calculos do que se o resultado é correto ou não.
+A aplicação não está como foi inicialmente planeada, faltando o perfil e a opção que permite ao utilizador de adicionar alimentos, mas, mesmo assim, consegue cumprir com o objetivo principal, contar calorias. Neste momento, os cálculos não estão precisos, uma vez que foi preferível focar no funcionamento dos calculos do que se o resultado é correto ou não.
 
 
 
