@@ -31,7 +31,11 @@ A aplicação não está como foi inicialmente planeada, faltando o perfil e a o
 
 
 
-Eduardo Costa 25969 | Filipe Araújo 25981 | Pedro Rodrigues 25982
+Eduardo Costa 25969 
+
+Filipe Araújo 25981 
+
+Pedro Rodrigues 25982
 
 
 
