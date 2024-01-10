@@ -17,6 +17,18 @@ Bem-vindo ao CaloriesCounter, sua ferramenta abrangente para o gerenciamento de 
 * **Navegação Intuitiva**: A interface do usuário foi projetada com uma navegação intuitiva, facilitando a transição entre as diferentes funcionalidades da aplicação
 
 ### Funcionamento 
+A pessoa escolhe os alimentos de interesse e estes serão adicionados numa lista onde depois poderá definir as devidas quantidades e assim obter os valores nutricionais.
+
+## Code 
+
+![Login](https://github.com/PRodrigues545/CaloriesCounter/assets/120456989/94668d31-3648-4f90-ba62-7b9a9288c1b2) ![Register](https://github.com/PRodrigues545/CaloriesCounter/assets/120456989/b7aa805f-26d0-4f8d-aa72-5b0199dd9cff)
+
+
+
+
+
+
+
 
 
 
